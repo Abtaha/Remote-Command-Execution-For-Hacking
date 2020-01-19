@@ -14,11 +14,9 @@ def check_ip(sock):
             result = sock.connect_ex((RHOST, RPORT))
 
             if result == 0:
-                print(f"Found At 192.168.{i}.{j}")
                 sock.connect((RHOST, RPORT))
                 return
             else:
-                print(f"Not found at 192.168.{i}.{j}")
                 continue
 
 
