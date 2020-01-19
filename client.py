@@ -6,8 +6,8 @@ import getpass
 
 
 def check_ip(sock):
-    for i in range(256):
-        for j in range(256):
+    for i in range(1, 256):
+        for j in range(1, 256):
             try:
                 RHOST = f"192.168.{i}.{j}"
                 RPORT = 13057
@@ -16,7 +16,7 @@ def check_ip(sock):
                 print(f"Found At 192.168.{i}.{j}")
                 return
             
-            except:
+            except socket.timeout:
                 print(f"Not found at 192.168.{i}.{j}")
 
 
