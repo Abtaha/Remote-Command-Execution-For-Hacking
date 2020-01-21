@@ -21,7 +21,8 @@ def check_ip(sock):
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-check_ip(sock)
+#check_ip(sock)
+sock.connect((RHOST, RPORT))
 
 while True:
     try:                 
